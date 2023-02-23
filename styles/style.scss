@@ -1,5 +1,6 @@
 * {
-    color: white;
+    // color: white;
+    color: #00100b;
     font-family: 'Roboto', Helvetica, sans-serif;
     font-weight: 300;
     letter-spacing: 2px;
@@ -7,56 +8,66 @@
 }
 
 body {
-    background: linear-gradient(90deg, #0c3e50, #23a6d5, #0c3e50);
-    background-size: 150% 100%;
+    // background: linear-gradient(90deg, #0c3e50, #23a6d5, #0c3e50);
+    // background-size: 150% 100%;
+    background-color: #e8ebf7;
 }
 
-.topnav {
-    padding: 1.5rem 1.5rem;
+.topbar {
+    width: 100vw;
+    height: 6em;
     display: flex;
-    height: 5rem;
-
-    h1 {
-        margin: 0;
-        font-size: 40px;
-        float: left;
-        border-bottom: 3px solid #d74100;
-    }
-
-    a {
-        font-size: 24px;
-        text-align: center;
-        margin: 0 1.5rem 0 1.5rem;
-        text-decoration: none;
-        border-bottom: 3px solid transparent;
-    }
-
-    a::after {
-        content: '';
-        display: flex;
-        transform: scaleX(0);
-        padding: 0.5rem 0.5rem;
-        border-bottom: 3px solid white;
-        transition: transform 0.3s ease;
-        transform-origin: left;
-    }
-
-    a:hover::after {
-        transform: scaleX(1);
-    }
-}
-
-.fab {
-    border-radius: 50%;
-    background-color: transparent;
-    border: 1px solid #ffffff9c;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    width: 85px;
-    height: 85px;
-    font-weight: bold;
-    color: #fff;
+
+    .logo {
+        padding-left: 2em;
+        width: 25%;
+
+        img {
+            width: 75px;
+            height: auto;
+        }
+    }
+
+    .icon {
+        width: 5%;
+    }
+
+    nav {
+        width: 70%;
+        justify-items: end;
+        padding-right: 2em;
+
+        a {
+            font-size: 24px;
+            margin-right: 1.5em;
+            text-decoration: none;
+        }
+    }
+}
+
+.hover-underline-animation {
+    position: relative;
+    // color: #ffffff;
+    color: black;
+    text-decoration: none;
+}
+
+.hover-underline-animation::after {
+    content: '';
     position: absolute;
-    transform: translate(90vw, 5vh);
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    // background-color: white;
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
