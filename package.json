@@ -1,8 +1,12 @@
 {
     "scripts": {
+        "build:digitalocean": "npm install --production=false && npm run build && npm ci",
         "watch:scss": "node-sass -w styles/style.scss styles/app.css"
     },
     "dependencies": {
         "node-sass": "^7.0.1"
+    },
+    "engines": {
+        "node": "16.x"
     }
 }
