@@ -7,6 +7,7 @@
         "watch:scss": "node-sass -w styles/style.scss styles/app.css"
     },
     "dependencies": {
+        "firebase": "^9.17.2",
         "node-sass": "^7.0.1"
     },
     "engines": {
